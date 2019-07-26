@@ -4,7 +4,7 @@ Created on Tue Jun  4 17:44:59 2019
 
 @author: DELL
 """
- #renk çarkı çıkarma
+
 from sklearn.cluster import KMeans
 import matplotlib.pyplot as plt
 import numpy as np
@@ -15,7 +15,7 @@ import os
 import plotly.plotly as py
 import plotly.graph_objs as go
 
-#renk çarkı çıkarma
+
 
 image = cv2.imread('resim.png')
 print("The type of this input is {}".format(type(image)))
@@ -50,7 +50,7 @@ def get_colors(image, number_of_colors, show_chart):
     counts = Counter(labels)
     
     center_colors = clf.cluster_centers_
-    # We get ordered colors by iterating through the keys
+   
     ordered_colors = [center_colors[i] for i in counts.keys()]
     hex_colors = [RGB2HEX(ordered_colors[i]) for i in counts.keys()]
     rgb_colors = [ordered_colors[i] for i in counts.keys()]
