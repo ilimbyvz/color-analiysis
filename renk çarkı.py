@@ -17,7 +17,7 @@ import plotly.graph_objs as go
 
 #renk çarkı çıkarma
 
-image = cv2.imread('2018sonuc.png')
+image = cv2.imread('resim.png')
 print("The type of this input is {}".format(type(image)))
 print("Shape: {}".format(image.shape))
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -65,4 +65,4 @@ def get_colors(image, number_of_colors, show_chart):
 
     return rgb_colors
 
-get_colors(get_image('2018sonuc.png'), 16, True)
+get_colors(get_image('resim.png'), 16, True) #yoğunluğu en fazla olan 16 renk tonu
